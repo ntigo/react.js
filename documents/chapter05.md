@@ -59,7 +59,7 @@ function Avatar({ person, size = 100 }) {
  컴포넌트의 이름은 항상 대문자로 시작되어야 합니다. 왜냐하면 
  리액트는 소문자로 시작하는 컴포넌트를 \<div>, \<span>같은 html 태그로 인식하기 때문입니다. 
 
-# 클래스 가져오기/내보내기
+# 컴포넌트 가져오기/내보내기
 ||Export statement|Import statement|
 |---|---|---|
 |Default|export default function Button() {}|import Button from './Button.js';|
@@ -112,7 +112,7 @@ function MyComponent() {
 }
 ```
 
-# 클래스 합성
+# 컴포넌트 합성
 여러개의 컴포넌트를 합쳐서 하나의 컴포넌트로 만드는 것
 
 # 컴포넌트 추출
