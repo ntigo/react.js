@@ -1,3 +1,8 @@
+<center>
+<img src=./resources/soaple.jpg
+width="170" height="200">
+</center>
+
 # Chapter 06. State와 생명주기
 
 ## state란?
@@ -42,8 +47,9 @@ this.state = {
  - 리액트 컴포넌트에는 `라이프사이클(수명 주기)`이 존재
  - 컴포넌트의 수명은 `페이지에 렌더링되기 전인 준비과정`에서 시작하여 `페이지에서 사라질 때` 끝난다.
 
- ![](2023-05-09-23-28-25.png)
-
+<center>
+<img src=./resources/lifeStyle.png>
+</center>
 
  - `constructor()`: State 데이터를 초기화하는 메소드
  - `render()`: 클래스 컴포넌트에서 반드시 구현되어야 하는 메소드
@@ -64,46 +70,6 @@ updating
 unmounting
  - 상위 컴포넌트에서 현재 컴포넌트를 더 이상 화면에 표시하지 않게 될 때
  - ComponentWillUnmount()
-
-```react
-class Clock extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {date: new Date()};
-    }
-  
-    componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      );
-      console.log("componentDidMount() called");
-    }
-  
-    componentWillUnmount() {
-      clearInterval(this.timerID);
-      console.log("componentWillUnmount() called");
-    }
-  
-    tick() {
-        this.setState({
-            date: new Date()
-            });
-      console.log("setState() called");
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>Hello, world!</h1>
-                <h2>현재 시간 : {this.state.date.toLocaleTimeString()}</h2>
-        </div>
-      );
-    }
-  }
-  
-  export default Clock;
-  ```
 
  ## 정리
  ---
