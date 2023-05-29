@@ -1,0 +1,17 @@
+
+.content_wrap .select_wrap {
+    display: inline-block;
+    margin-left: 15px;
+}
+.content_wrap .select_wrap .select_title {
+    display: inline-block;
+    margin-right: 15px;
+}
+.content_wrap .select_wrap .react_list_option {
+    width: 100px;
+    height: 30px;
+    font-weight: 800;
+}
+.content_wrap .main_title {
+    margin-left: 15px;
+}

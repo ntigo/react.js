@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './chapter07A/App';
 import reportWebVitals from './reportWebVitals';
+import ListKey from './chapter10/ListKey';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ListKey />
   </React.StrictMode>
 );
 
