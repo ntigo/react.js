@@ -4,38 +4,32 @@ const RealCase1 = () => {
     const list = [
         {
             id: 0,
-            name: "손흥민"
+            name: "김범수"
         },
         {
             id: 1,
-            name: "김민재"
+            name: "나얼"
         },
         {
             id: 2,
-            name: "이강인"
+            name: "박효신"
         },
         {
             id: 3,
-            name: "황희찬"
+            name: "이수"
         },
     ];
-    const renderListItem = (item) => {
-        return (
-            <List.Item>
-                {item.name}
-            </List.Item>
-        );
-    };
-    const getRowKey = (item) => item.id;
 
     return (
         <div className="content_wrap">
-            <h2 className="main_title">축구 선수</h2>
-            <List
-                dataSource={list}
-                renderItem={renderListItem}
-                rowKey={getRowKey}
-            />
+            <h2 className="main_title">가수</h2>
+            <List>
+                {
+                    list.map((item) => (
+                        <List.Item key={item.id}>{item.name}</List.Item>
+                    ))
+                }
+            </List>
         </div>
     )
 }
