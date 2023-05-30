@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ListKey from './chapter10/ListKey';
+import {default as App} from './chapter10/RealCase1.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ListKey />
+    <App />
   </React.StrictMode>
 );
 
