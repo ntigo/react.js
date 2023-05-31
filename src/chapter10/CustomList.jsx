@@ -1,6 +1,6 @@
 import ListView from './ListView'
-import {List} from 'antd'
-// import {renderListItem, getRowKey} from './common'
+import { List } from 'antd'
+import { renderListItem, getRowKey } from './common'
 
 const CustomList = () => {
     const list = [
@@ -21,14 +21,14 @@ const CustomList = () => {
             name: "황희찬"
         },
     ];
-    const renderListItem = (item) => {
-        return (
-            <List.Item>
-                {item.name}
-            </List.Item>
-        );
-    };
-    const getRowKey = (item) => item.id;
+    // const renderListItem = (item) => {
+    //     return (
+    //         <List.Item>
+    //             {item.name}
+    //         </List.Item>
+    //     );
+    // };
+    // const getRowKey = (item) => item.id;
 
     return (
         <ListView

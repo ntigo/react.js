@@ -56,17 +56,17 @@ const TabletList = () => {
         product: '태블릿 Ultra',
       },
     ];
-    const TabletList1 = tabletList.map((tablet) => (
+    const tabletList1 = tabletList.map((tablet) => (
       <li key={tablet.serialNo}>{tablet.product}</li>
     ));
-    const TabletList2 = tabletList.map((tablet) => (
+    const tabletList2 = tabletList.map((tablet) => (
       <li key={tablet.productNo}>{tablet.product}</li>
     ));
 
     return (
       <ul>
-        {TabletList1}
-        {TabletList2}
+        {tabletList1}
+        {tabletList2}
       </ul>
     );
 }
@@ -75,15 +75,15 @@ const TabletList = () => {
 ```jsx
 const FruitList = () => {
     const fruits = ["사과", "바나나", "포도", "오렌지"];
-    const Fruits = fruits.map((fruit, idx) => (
+    const fruitList = fruits.map((fruit, idx) => (
       <li key={idx}>{fruit}</li>
     ));
-    return <ul>{Fruits}</ul>;
+    return <ul>{fruitList}</ul>;
 }
 ```
 ### &nbsp;&nbsp;3. 인조 식별자 사용시 `주의사항`
 - 예상치 못한 동작 발생 가능
-- 항목에 변화를 주지 않는 케이스에서 사용  
+- 항목에 변화가 없는 경우 사용  
 : ex) 라디오 버튼, 셀렉트 박스
 <br><br>
 

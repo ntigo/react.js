@@ -31,8 +31,8 @@ function ListKey() {
                 <option>나쁨</option>
                 <option>좋음</option>
                 <option>매우 좋음</option>
-          </select>
-          <button onClick={() => deletePlayer(player.id)}>삭제</button>
+            </select>
+            <button onClick={() => deletePlayer(player.id)}>삭제</button>
         </li>
     ));
 
