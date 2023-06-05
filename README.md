@@ -71,3 +71,5 @@ IT 전략본부에서 진행되는 '소플의 처음 만난 리액트' 발표 �
 [9. 조건부 렌더링](documents/chapter09.md)  
 [10. 리스트와 키](documents/chapter10.md)  
 [11. 폼](documents/chapter11.md)  
+[12. State 끌어올리기](documents/chapter12.md)  
+[13. 합성 vs. 상속](documents/chapter13.md)  
