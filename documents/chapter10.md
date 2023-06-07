@@ -25,9 +25,14 @@ https://dev.to/stuxnat/final-react-project-2poi
 
 
 ## 5. 해결 방안 
-문제를 해결하기 위한 다양한 방법이 있는데, Context API 사용, Redux나 MobX 같은 상태 관리 라이브러리 사용 등이 있습니다. 이러한 도구를 사용하면 중간 컴포넌트들을 거치지 않고도 상태를 공유할 수 있게 됩니다.
+문제를 해결하기 위한 다양한 방법이 있는데, Context API 사용, Redux나 Recoil 같은 상태 관리 라이브러리 사용 등이 있습니다. 이러한 도구를 사용하면 중간 컴포넌트들을 거치지 않고도 상태를 공유할 수 있게 됩니다.
 
 
+### zustand  
+https://zustand-demo.pmnd.rs/
+
+### 참고 링크 
+https://velog.io/@juhyeon1114/React-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%A6%AC%EB%B7%B0-Zustand-Recoil-Jotai-React-query
 
 
 
