@@ -44,4 +44,34 @@ width="170" height="200">
 <div className={"correct"}>오류가 발생하지 않습니다.</div>
 <div class={"not_correct"}>오류가 발생합니다.</div>
 ```
+<br/><br/>
+
+## Part Ⅱ. styled-components
+### 1. `styled-components`란?
+: 컴포넌트 내부에서 기존의 CSS 문법을 사용할 수 있도록 도와주는 라이브러리입니다.
+<br/><br/>
+
+### 2. styled-components `장점`(특징)
+[1] `CSS 선택자 없이` 컴포넌트에 스타일을 적용할 수 있습니다.<br/>
+[2] 라이브러리에 포함된 함수 및 메소드의 `결과 값이 리액트 컴포넌트`입니다.
+<br/><br/>
+
+### 3. styled-components `단점`
+[1] CSS 문법과 기타 로직이 컴포넌트 내에서 혼재되어 `가독성`이 떨어집니다.<br/>
+[2] CSS만을 `재사용`하기 어렵습니다.
+```jsx
+// 태그 함수 & 태그드 템플릿 리터럴
+const Title = styled.h1`
+    color: orange;
+    font-style: oblique;
+`;
+const SubTitle = styled("h2")`
+    color: blue;
+    font-style: oblique;
+`;
+```
+<br/><br/>
+
+## Part Ⅲ. CSS Module
+
 
