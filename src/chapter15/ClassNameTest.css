@@ -1,8 +1,8 @@
-.correct {
+.class_name_test_wrap .correct {
     color: blue;
     font-weight: 800;
 }
-.not_correct {
+.class_name_test_wrap .not_correct {
     color: red;
     font-weight: 800;
 }
