@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { default as App } from './chapter15/TemplateLiteral';
+import { default as App } from './chapter15/Canvas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

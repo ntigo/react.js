@@ -58,7 +58,8 @@ width="170" height="200">
 
 ### 3. styled-components `단점`
 [1] CSS 문법과 기타 로직이 컴포넌트 내에서 혼재되어 `가독성`이 떨어집니다.<br/>
-[2] CSS만을 `재사용`하기 어렵습니다.
+[2] CSS만을 `재사용`하기 어렵습니다.<br/>
+[3] 리렌더링시 항상 CSS도 함께 렌더링됩니다.<br/>
 ```jsx
 // 태그 함수 & 태그드 템플릿 리터럴
 const Title = styled.h1`
@@ -73,5 +74,70 @@ const SubTitle = styled("h2")`
 <br/><br/>
 
 ## Part Ⅲ. CSS Module
+### 1. `CSS Module`이란?
+: CSS를 `모듈화`하여 사용하는 방식입니다. 
+<br/><br/>
 
+### 2. CSS Module `장점`(특징)
+[1] 클래스명의 `전역 오염을 방지`합니다.<br/>
+[2] 복잡한 클래스명을 사용할 필요없으며, `개발 및 유지보수가 용이`합니다.<br/>
+<br/>
 
+### 3. CSS Module `단점`
+[1] 동적인 클래스명을 사용시 `의도하지 않은 클래스명(false)`이 렌더링될 수 있습니다.<br/>
+=> 해결을 위해 `classnames`라는 라이브러리를 추가로 설치해야 합니다.<br/>
+[2] 다중 클래스명을 사용시 가독성이 떨어집니다.<br/>
+```css
+/* css파일 생성시 확장자 앞에 ".module"을 추가한 후 사용합니다. */
+.title {
+    color: orange;
+    font-size: 50px;
+    font-weight: 800;
+}
+.sub_title {
+    font-size: 24px;
+    font-weight: 600
+}
+.contents {
+    font-size: 20px;
+    color: green;
+    font-weight: 600;
+}
+.blue {
+    color: blue;
+}
+```
+```jsx
+import Style from "./CssModule.module.css";
+
+//...
+
+const [toggle, setToggle] = useState(true);
+
+// "Style.클래스명"과 같이 사용합니다.
+<div className={Style.title}>CSS Module!!</div>
+// 다중 클래스명은 템플릿 리터럴을 통해 사용합니다.
+<div className={`${Style.sub_title} ${Style.blue}`}>Is sub-title!</div>
+// 동적 클래스명은 논리 연산자를 통해 사용합니다.
+<div className={toggle && Style.contents}>Contents blahblah~</div>
+```
+<br/><br/>
+
+## Part Ⅳ. antd
+### 1. `antd`란?
+: 리액트의 UI 라이브러리로써 미리 구현한 다양한 컴포넌트들을 제공합니다.
+<br/><br/>
+
+### 2. antd `장점`(특징)
+[1] 실무에 적용 가능한 `높은 수준의 컴포넌트`를 제공합니다.<br/>
+[2] 컴포넌트를 포함하여 아이콘 등 `다양한 디자인 요소`를 제공합니다.<br/>
+[3] `다양한 예제`를 제공합니다.<br/>
+<br/>
+
+### 3. antd `단점`
+[1] 컴포넌트의 `기능을 파악`하는데 `오랜 시간`이 걸립니다.<br/>
+[2] 컴포넌트를 `커스터마이징`하기 어렵습니다.<br/>
+<br/>
+
+### 4. Ant Design 공식 홈페이지
+: https://ant.design/
