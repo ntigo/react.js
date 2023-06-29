@@ -1,0 +1,21 @@
+/* css파일 생성시 확장자 앞에 ".module"을 추가한 후 사용합니다. */
+.title {
+    color: orange;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.sub_title {
+    font-size: 24px;
+    font-weight: 600
+}
+
+.contents {
+    font-size: 20px;
+    color: green;
+    font-weight: 600;
+}
+
+.blue {
+    color: blue;
+}

@@ -1,0 +1,27 @@
+.parents .child {
+    color: purple;
+}
+
+.child_important {
+    color: indigo !important;
+}
+
+#child {
+    color: green;
+}
+
+.childNode {
+    color: yellow;
+}
+
+h2 {
+    color: orange;
+}
+
+.parents {
+    color: red;
+}
+
+.parents .children {
+    color: gray;
+}
