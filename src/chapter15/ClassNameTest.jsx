@@ -1,6 +1,6 @@
 import React from "react";
 import "./ClassNameTest.css";
-import {ReloadOutlined} from "@ant-design/icons";
+import { ReloadOutlined } from "@ant-design/icons";
 
 
 const util = require("util");
@@ -14,9 +14,9 @@ const ClassNameTest = () => {
     return (
         <div className="class_name_test_wrap">
             {/* 리액트에서는 class라는 프로퍼티 대신 className을 사용한다.*/}
-            <button type={"button"} onClick={() => window.location.reload()}><ReloadOutlined/> 새로 고침</button>
+            <button type={"button"} onClick={() => window.location.reload()}><ReloadOutlined /> 새로 고침</button>
             <div className={"correct"}>오류가 발생하지 않습니다.</div>
-            <div class={"not_correct"}>오류가 발생합니다.</div>
+            <div className={"not_correct"}>오류가 발생합니다.</div>
         </div>
     )
 }

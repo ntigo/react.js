@@ -1,107 +1,76 @@
-import { Tree } from 'antd';
-import { useState } from 'react';
-const treeData = [
-    {
-        title: '0-0',
-        key: '0-0',
-        children: [
-            {
-                title: '0-0-0',
-                key: '0-0-0',
-                children: [
-                    {
-                        title: '0-0-0-0',
-                        key: '0-0-0-0',
-                    },
-                    {
-                        title: '0-0-0-1',
-                        key: '0-0-0-1',
-                    },
-                    {
-                        title: '0-0-0-2',
-                        key: '0-0-0-2',
-                    },
-                ],
-            },
-            {
-                title: '0-0-1',
-                key: '0-0-1',
-                children: [
-                    {
-                        title: '0-0-1-0',
-                        key: '0-0-1-0',
-                    },
-                    {
-                        title: '0-0-1-1',
-                        key: '0-0-1-1',
-                    },
-                    {
-                        title: '0-0-1-2',
-                        key: '0-0-1-2',
-                    },
-                ],
-            },
-            {
-                title: '0-0-2',
-                key: '0-0-2',
-            },
-        ],
-    },
-    {
-        title: '0-1',
-        key: '0-1',
-        children: [
-            {
-                title: '0-1-0-0',
-                key: '0-1-0-0',
-            },
-            {
-                title: '0-1-0-1',
-                key: '0-1-0-1',
-            },
-            {
-                title: '0-1-0-2',
-                key: '0-1-0-2',
-            },
-        ],
-    },
-    {
-        title: '0-2',
-        key: '0-2',
-    },
-];
-const Canvas = () => {
-    const [expandedKeys, setExpandedKeys] = useState(['0-0-0', '0-0-1']);
-    const [checkedKeys, setCheckedKeys] = useState(['0-0-0']);
-    const [selectedKeys, setSelectedKeys] = useState([]);
-    const [autoExpandParent, setAutoExpandParent] = useState(true);
-    const onExpand = (expandedKeysValue) => {
-        console.log('onExpand', expandedKeysValue);
-        // if not set autoExpandParent to false, if children expanded, parent can not collapse.
-        // or, you can remove all expanded children keys.
-        setExpandedKeys(expandedKeysValue);
-        setAutoExpandParent(false);
-    };
-    const onCheck = (checkedKeysValue) => {
-        console.log('onCheck', checkedKeysValue);
-        setCheckedKeys(checkedKeysValue);
-    };
-    const onSelect = (selectedKeysValue, info) => {
-        console.log('onSelect', info);
-        setSelectedKeys(selectedKeysValue);
-    };
-    return (
-        <Tree
-            checkable
-            onExpand={onExpand}
-            expandedKeys={expandedKeys}
-            autoExpandParent={autoExpandParent}
-            onCheck={onCheck}
-            checkedKeys={checkedKeys}
-            onSelect={onSelect}
-            selectedKeys={selectedKeys}
-            treeData={treeData}
-        />
-    );
+import { Button, Checkbox, Form, Input } from 'antd';
+const onFinish = (values) => {
+    console.log('Success:', values);
 };
+const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+};
+const Canvas = () => (
+    <Form
+        name="basic"
+        labelCol={{
+            span: 8,
+        }}
+        wrapperCol={{
+            span: 16,
+        }}
+        style={{
+            maxWidth: 600,
+        }}
+        initialValues={{
+            remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
+    >
+        <Form.Item
+            label="Username"
+            name="username"
+            rules={[
+                {
+                    required: true,
+                    message: 'Please input your username!',
+                },
+            ]}
+        >
+            <Input />
+        </Form.Item>
+
+        <Form.Item
+            label="Password"
+            name="password"
+            rules={[
+                {
+                    required: true,
+                    message: 'Please input your password!',
+                },
+            ]}
+        >
+            <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+            name="remember"
+            valuePropName="checked"
+            wrapperCol={{
+                offset: 8,
+                span: 16,
+            }}
+        >
+            <Checkbox>Remember me</Checkbox>
+        </Form.Item>
+
+        <Form.Item
+            wrapperCol={{
+                offset: 8,
+                span: 16,
+            }}
+        >
+            <Button type="primary" htmlType="submit">
+                Submit
+            </Button>
+        </Form.Item>
+    </Form>
+);
 export default Canvas;
